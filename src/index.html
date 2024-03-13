@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css">
+  <title>RRC-404 Ice token and NFT handler</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <script type="module" src="/main.js"></script>
+
+  <div class="connectBtn">
+    <radix-connect-button />
+  </div>
+  <h1>A site to perform the Freeze and Melt action on the Water(ICE) token</h1>
+  <p>Ice/Water tokens are an experimental version of ERC-404 built on Radix with Scrypto.</br> 
+    Token holders can convert between Ice NFTs and Water Fungibles.</p>
+  <p>When Minting the NFT a green, blue, red, orange or purple result could be obtained.</br>
+  There is no randomness in this assignment. The component aims to get a prefered distribution.</br>
+  green should be 42% of the circulating NFTs, blue 30%, red 16%, orange 7% and purple 4%.</br> 
+  If the precentile amount if green is less then 42% a green NFT will be minted.</br> 
+  When this percentage is higher than the prefered distribution the same check will be done for blue.</br>
+  The distribution percentages are listed on this page! 
+</p> 
+
+
+  <h1>Refresh when connected!</h1>
+  <p><b>Please select a single wallet; one that contains the Ice token or Ice NFT</b></p>
+  <button id="refreshwallet">Refresh</button>
+  <div class="container">
+    <p>Selected Wallet : <span id="walletAddress"></span></br>
+      Your Ice Token Amount : <span id="iceamount"></span></br>
+      Your Ice NFT Amount : <span id="icenftamount"></span></br></br>
+      Component Name : <span id="componentname"></span></br></br>
+      Component Green Supply: <span id="componentgreen"></span></br>
+      Component Blue Supply: <span id="componentblue"></span></br>
+      Component Red Supply: <span id="componentred"></span></br>
+      Component Orange Supply: <span id="componentorange"></span></br>
+      Component Purple Supply: <span id="componentpurple"></span></br>
+      Component NFT total: <span id="componentallnft"></span></br></p>
+  </div>
+
+  <div class="divider"></div>
+  <h2>Freeze token to NFT</h2>
+  <p>Select the number of tokens to Freeze</p>
+  <p><input id="freeze_amount_input" type="range" min="0" max="10" step="1" /> <p>
+  <button id="performfreeze">Perform Freeze</button>
+
+  <div class="divider"></div>
+  <h2>Melt NFT to token by amount</h2>
+  <p>Select the number of tokens to Melt</p>
+  <p><input id="melt_amount_input" type="range" min="0" max="10" step="1" /> <p>
+  <button id="performmelt">Perform Melt</button>
+  <div class="divider"></div>
+
+  <div class="divider"></div>
+  <h2>Melt NFT to token by NFTid(s)</h2>
+  <p>Supply the NFTid(s) to Melt use space as seperator</br>
+  Only the number as input i.e.: 123 not #123#</p>
+  <p><input id="melt_bynftids_input" type="text" /> <p>
+  <button id="performmeltbyids">Perform Melt by ID(s)</button>
+  <div class="divider"></div>
+
+</body>
+
+</html>
