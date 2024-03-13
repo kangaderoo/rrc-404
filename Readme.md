@@ -8,12 +8,10 @@ Nodejs/NPM needs to be installed</br>
 
 ## Getting started: Webclient
 
-In the `/src` folder edit the main.js file:</br>
-- update the variables as directed
-
 In the `root` folder.</br>
 - start the website</br>
         %-> npm install	
+
         %-> npm run dev
 
 This will start the client webserver @localhost:3000
