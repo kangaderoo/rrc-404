@@ -10,8 +10,8 @@ Nodejs/NPM needs to be installed</br>
 
 In the `root` folder.</br>
 - start the website</br>
-        %-> npm install	
 
+        %-> npm install	
         %-> npm run dev
 
 This will start the client webserver @localhost:3000
