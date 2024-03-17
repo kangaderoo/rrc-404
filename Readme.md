@@ -1,10 +1,10 @@
-# RRC-404 Frontencd
+# Radix RRC-404 Frontend
 
 A site for easy interaction with the Water(ICE) token.</br> 
 
 # requirements
 Nodejs/NPM needs to be installed</br>
-- <b>note</b>: verify the install version is ok for use with the radix-dapp-toolkit.</br>
+- <b>note</b>: verify the NPM install version is ok for use with the radix-dapp-toolkit.</br>
 
 ## Getting started: Webclient
 
