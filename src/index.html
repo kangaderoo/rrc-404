@@ -19,16 +19,18 @@
   <p>Ice/Water tokens are an experimental version of ERC-404 built on Radix with Scrypto.</br> 
     Token holders can convert between Ice NFTs and Water Fungibles.</p>
   <p>When Minting the NFT a green, blue, red, orange or purple result could be obtained.</br>
-  There is no randomness in this assignment. The component aims to get a prefered distribution.</br>
-  green should be 42% of the circulating NFTs, blue 30%, red 16%, orange 7% and purple 4%.</br> 
-  If the precentile amount if green is less then 42% a green NFT will be minted.</br> 
-  When this percentage is higher than the prefered distribution the same check will be done for blue.</br>
-  The distribution percentages are listed on this page! 
+  There is no randomness in this assignment.<br> 
+  The components distribution algoritmn aims to get the following prefered distribution:</br>
+  Green should be 42% of the circulating NFTs, Blue 30%, Red 16%, Orange 8% and Purple 4%.</br> 
+  If the precentile amount of any color is less then the target percentile the color with the</br> 
+  highest percentile deficit will be mined next.</br>
+  Both Freezing and Melting affects the ratio's of the current distribution.</br>
+  The actual minted percentages are listed on this page. 
 </p> 
 
 
   <h1>Refresh when connected!</h1>
-  <p><b>Please select a single wallet; one that contains the Ice token or Ice NFT</b></p>
+  <p><b>Please select a single wallet; one that contains the Ice token(s) or Ice NFT(s)</b></p>
   <button id="refreshwallet">Refresh</button>
   <div class="container">
     <p>Selected Wallet : <span id="walletAddress"></span></br>
@@ -40,7 +42,8 @@
       Component Red Supply: <span id="componentred"></span></br>
       Component Orange Supply: <span id="componentorange"></span></br>
       Component Purple Supply: <span id="componentpurple"></span></br>
-      Component NFT total: <span id="componentallnft"></span></br></p>
+      Component NFT total: <span id="componentallnft"></span></br>
+      Component NFT counter: <span id="componentnftcounter"></span></br></p>
   </div>
 
   <div class="divider"></div>
@@ -58,7 +61,7 @@
 
   <div class="divider"></div>
   <h2>Melt NFT to token by NFTid(s)</h2>
-  <p>Supply the NFTid(s) to Melt use space as seperator</br>
+  <p>Supply the NFTid(s) to Melt; use space as seperator</br>
   Only the number as input i.e.: 123 not #123#</p>
   <p><input id="melt_bynftids_input" type="text" /> <p>
   <button id="performmeltbyids">Perform Melt by ID(s)</button>

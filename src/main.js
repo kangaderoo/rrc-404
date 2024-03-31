@@ -127,6 +127,7 @@ refreshButtonElement.addEventListener("click", async () => {
   var rsup=0
   var osup=0
   var psup=0
+  var nftcounter=0
 
   const getDappDetails = await radixDappToolkit.gatewayApi.state.getEntityDetailsVaultAggregated(dAppcomponent);
   const fieldsarray = getDappDetails.details.state.fields
@@ -146,6 +147,9 @@ refreshButtonElement.addEventListener("click", async () => {
         break;
       case "purple_supply" :
         psup = parseFloat(element.value)
+        break;
+      case "nft_counter" :
+        nftcounter = parseFloat(element.value)
         break;
       default:
         // code block
@@ -177,6 +181,7 @@ refreshButtonElement.addEventListener("click", async () => {
   document.getElementById('componentorange').innerText = osup + " (" + Number(osup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
   document.getElementById('componentpurple').innerText = psup + " (" + Number(psup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
   document.getElementById('componentallnft').innerText = totalsupply
+  document.getElementById('componentnftcounter').innerText = nftcounter; 
 
  });
 
