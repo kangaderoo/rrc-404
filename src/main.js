@@ -175,11 +175,11 @@ refreshButtonElement.addEventListener("click", async () => {
 
   document.getElementById('componentname').innerText = getDappDetails.details.blueprint_name    
 
-  document.getElementById('componentgreen').innerText = gsup + " (" + Number(gsup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
-  document.getElementById('componentblue').innerText = bsup + " (" + Number(bsup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
-  document.getElementById('componentred').innerText = rsup + " (" + Number(rsup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
-  document.getElementById('componentorange').innerText = osup + " (" + Number(osup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
-  document.getElementById('componentpurple').innerText = psup + " (" + Number(psup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
+  document.getElementById('componentgreen').innerText = gsup + " (" + Number(gsup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")" + " (" + Number((gsup/totalsupply)-0.42).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
+  document.getElementById('componentblue').innerText = bsup + " (" + Number(bsup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")" + " (" + Number((bsup/totalsupply)-0.3).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
+  document.getElementById('componentred').innerText = rsup + " (" + Number(rsup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")" + " (" + Number((rsup/totalsupply)-0.16).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
+  document.getElementById('componentorange').innerText = osup + " (" + Number(osup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")" + " (" + Number((osup/totalsupply)-0.08).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
+  document.getElementById('componentpurple').innerText = psup + " (" + Number(psup/totalsupply).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")" + " (" + Number((psup/totalsupply)-0.04).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2}) + ")"; 
   document.getElementById('componentallnft').innerText = totalsupply
   document.getElementById('componentnftcounter').innerText = nftcounter; 
 
